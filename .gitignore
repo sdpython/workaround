@@ -1,0 +1,8 @@
+*.pyd
+*.so
+*.obj
+*.lib
+*.whl
+*.exp
+PKG-INFO
+**.egg-info
