@@ -4,5 +4,6 @@
 *.lib
 *.whl
 *.exp
+.eggs
 PKG-INFO
 **.egg-info
