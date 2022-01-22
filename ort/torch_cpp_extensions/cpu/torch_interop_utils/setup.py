@@ -9,6 +9,8 @@ from torch.utils import cpp_extension
 from torch import __version__ as version
 
 version_torch = version.split('+')[0]
+if "+cu" in version:
+    raise RuntimeError("Unexpected torch version for cpu: %r." % version)
 
 filename = os.path.join(os.path.dirname(__file__),
                         'torch_interop_utils.cc')
