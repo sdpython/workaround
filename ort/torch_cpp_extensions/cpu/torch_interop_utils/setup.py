@@ -12,15 +12,13 @@ version_torch = version.split('+')[0]
 if "+cu" in version:
     raise RuntimeError("Unexpected torch version for cpu: %r." % version)
 
-filename = os.path.join(os.path.dirname(__file__),
-                        'torch_interop_utils.cc')
-
+filename = os.path.join(os.path.dirname(__file__), "torch_interop_utils.cc")
 setup(
-    name='torch_interop_utils',
+    name="torch_interop_utils",
     ext_modules=[
         cpp_extension.CppExtension(
-            name='torch_interop_utils', sources=[filename])],
-    cmdclass={'build_ext': cpp_extension.BuildExtension},
+            name="torch_interop_utils", sources=[filename])],
+    cmdclass={"build_ext": cpp_extension.BuildExtension},
     version=version,
     author='Microsoft Corporation',
     author_email='onnxruntime@microsoft.com',
